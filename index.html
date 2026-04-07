@@ -9,7 +9,6 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #eee;
 }
 
 /* CONTAINER */
@@ -19,13 +18,7 @@ body {
   padding: 15px;
 }
 
-/* SEÇÕES */
-.section {
-  margin: 30px 0;
-  text-align: center;
-}
-
-/* FLEX (sempre empilhado) */
+/* FLEX (corrigido - sem duplicação) */
 .flex {
   display: flex;
   flex-direction: column;
@@ -33,13 +26,21 @@ body {
   gap: 20px;
 }
 
-/* CAIXAS */
+/* CONTROLE DO MOCKUP (AJUSTE PRINCIPAL) */
+.flex img {
+  width: 100%;
+  max-width: 350px; /* 👈 tamanho ideal */
+}
+
+/* TEXTOS */
+.section {
+  margin: 30px 0;
+  text-align: center;
+}
+
 .box {
   padding: 20px;
   border-radius: 10px;
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
 }
 
 /* CORES */
@@ -55,11 +56,10 @@ body {
   background: radial-gradient(circle, #cbfdbd 82%, #000 99%);
 }
 
-/* IMAGENS */
+/* IMAGENS (corrigido - sem distorção) */
 img {
   width: 100%;
   height: auto;
-  max-width: 600px;
 }
 
 /* BOTÕES */
@@ -81,10 +81,10 @@ img {
 .demo { background: #200000; }
 .hotmart { background: #FF5C00; }
 
-/* VIDEO */
+/* VIDEO (mantido como você configurou) */
 .video {
   width: 100%;
-  max-width: 400px;
+  max-width: 600px;
   aspect-ratio: 9/16;
   margin: 20px auto;
 }
@@ -95,14 +95,11 @@ iframe {
   border: none;
 }
 
-/* DESKTOP AJUSTE */
-@media (min-width: 900px) {
-
-  .video {
-    aspect-ratio: 16/9;
-    max-width: 700px;
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  .section {
+    font-size: 16px;
   }
-
 }
 </style>
 </head>
@@ -162,11 +159,11 @@ iframe {
     </p>
   </div>
 
-  <!-- BOTÕES -->
   <a class="btn demo" href="https://github.com/edi10art-create/lojasuperdu/releases/download/v1.0/BrandNotify-BrandNotify.Demo.apk" target="_blank">
     BrandNotify Demo
   </a>
 
+  <!-- SEGURANÇA -->
   <div class="section box grad3">
     <p>
       Esta versão é exclusiva para Android.<br><br>
