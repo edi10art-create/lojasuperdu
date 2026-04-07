@@ -18,11 +18,22 @@ body {
   padding: 15px;
 }
 
-  .flex {
+ .flex {
   display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  justify-content: center; /* 👈 resolve */
+  flex-direction: column; /* 👈 força empilhado */
+  align-items: center;
+  gap: 20px;
+}
+
+  .flex img {
+  width: 100%;
+  max-width: 600px;
+}
+
+.flex .box {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 
