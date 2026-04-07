@@ -30,24 +30,23 @@ body {
   border-radius: 10px;
 }
 
-/* IMAGENS - Ajuste para não estourarem no PC */
+/* IMAGENS */
 img {
   width: 100%;
-  height: 70%; /* Limita tamanho das imagens no PC */
+  height: auto;
   margin: 0 auto;
   display: block;
 }
 
-/* FLEX (Para o Mockup específico) */
+/* MOCKUP */
 .flex {
   width: 100%;
-  height: 70%; /* Limita tamanho das imagens no PC */
   margin: 0 auto;
-  display: block
+  display: block;
 }
 
 .flex img {
-  max-width: 350px; 
+  max-width: 350px;
 }
 
 /* CORES */
@@ -74,7 +73,7 @@ img {
 .demo { background: #200000; }
 .hotmart { background: #FF5C00; }
 
-/* VÍDEOS REPROJETADOS */
+/* VÍDEOS */
 .video-wrapper {
   display: flex;
   flex-direction: column;
@@ -85,7 +84,7 @@ img {
 
 .video-item {
   width: 100%;
-  max-width: 320px; /* Largura de celular */
+  max-width: 320px;
   aspect-ratio: 9/16;
   background: #000;
   border-radius: 15px;
@@ -98,7 +97,7 @@ iframe {
   border: none;
 }
 
-/* AJUSTES PARA COMPUTADOR (DESKTOP) */
+/* DESKTOP */
 @media (min-width: 768px) {
   .video-wrapper {
     flex-direction: row;
@@ -121,10 +120,14 @@ iframe {
     <img src="assets/Loja SuperDu Logo Letreiro Face (Loja.com Preto).png" style="max-width: 450px;">
   </div>
 
-  <!-- CHAMADA -->
+  <!-- CHAMADA (MELHORADA) -->
   <div class="section box grad1">
-    <h2>Coloque sua marca no celular do seu cliente.</h2>
-    <p>Aplicativo personalizado para empresas que querem ser lembradas no dia a dia do cliente.</p>
+    <h2>Coloque sua marca no celular do seu cliente todos os dias.</h2>
+    <p>
+      Sem depender de anúncios. Sem disputar atenção.<br><br>
+      Seu cliente usa o app. Sua marca aparece.<br>
+      Simples, constante e automático.
+    </p>
   </div>
 
   <!-- MOCKUP -->
@@ -132,17 +135,19 @@ iframe {
     <img src="assets/MockupBrandNotify (2).webp">
   </div>
 
-  <!-- TEXTO -->
+  <!-- COMO FUNCIONA (MELHORADO) -->
   <div class="section box grad2">
-    <h3>Veja como funciona</h3>
+    <h3>Como funciona na prática</h3>
     <p>
-      O cliente instala o app com a sua marca.<br><br>
-      Recebe notificações.<br><br>
-      Lembra da sua empresa todos os dias.
+      O cliente instala um aplicativo com a sua marca.<br><br>
+      Usa no dia a dia para tarefas simples.<br><br>
+      Recebe notificações úteis do próprio celular.<br><br>
+      E em todos esses momentos…<br>
+      <strong>sua marca está presente.</strong>
     </p>
   </div>
 
-  <!-- VIDEOS (AGORA VISÍVEIS) -->
+  <!-- VIDEOS -->
   <div class="video-wrapper">
     <div class="video-item">
       <iframe src="https://www.youtube.com/embed/ivfOQj1AFJQ"></iframe>
@@ -152,14 +157,28 @@ iframe {
     </div>
   </div>
 
-  <!-- TEXTO LONGO -->
+  <!-- O QUE É (MELHORADO) -->
   <div class="section box" style="background:#f3f2ae;">
     <h2>O que é o BrandNotify?</h2>
     <p>
-      Sua marca presente todos os dias na vida do seu cliente — sem anúncios.<br><br>
-      Transforme o celular em um canal contínuo de branding.<br><br>
+      Sua marca presente todos os dias na vida do cliente — sem anúncios.<br><br>
+      Em vez de disputar atenção, você passa a fazer parte da rotina.<br><br>
       O cliente usa → sua marca aparece.<br><br>
-      Simples assim.
+      Não é propaganda.<br>
+      <strong>É presença constante.</strong>
+    </p>
+  </div>
+
+  <!-- INSTALAÇÃO (NOVO) -->
+  <div class="section box grad3">
+    <h3>Como instalar o app</h3>
+    <p>
+      1. Toque no botão <strong>BrandNotify Demo</strong><br><br>
+      2. O download será iniciado automaticamente<br><br>
+      3. Abra o arquivo baixado<br><br>
+      4. Toque em <strong>"Instalar"</strong><br><br>
+      5. Se aparecer aviso de segurança, permita a instalação<br><br>
+      ✔ Pronto. Em poucos segundos o app estará funcionando.
     </p>
   </div>
 
@@ -167,12 +186,29 @@ iframe {
     BrandNotify Demo
   </a>
 
-  <!-- SEGURANÇA -->
+  <!-- SEGURANÇA (MELHORADO) -->
   <div class="section box grad3">
     <p>
       Esta versão é exclusiva para Android.<br><br>
-      O app é seguro e não coleta dados.<br><br>
-      Experimente agora.
+      O sistema pode exibir um aviso por não estar na Play Store.<br>
+      Isso é normal.<br><br>
+      ✔ O app é seguro<br>
+      ✔ Não coleta dados<br>
+      ✔ Não acessa informações pessoais<br><br>
+      Você pode testar com total tranquilidade.
+    </p>
+  </div>
+
+  <!-- IMPACTO (NOVO) -->
+  <div class="section box grad1">
+    <h3>Por que isso funciona tão bem?</h3>
+    <p>
+      Porque você não interrompe o cliente.<br><br>
+      Não depende de algoritmo.<br><br>
+      Não disputa atenção.<br><br>
+      ✔ Sua marca aparece sozinha<br>
+      ✔ Todos os dias<br>
+      ✔ De forma natural
     </p>
   </div>
 
