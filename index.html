@@ -9,6 +9,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background: #eee;
 }
 
 /* CONTAINER */
@@ -18,37 +19,30 @@ body {
   padding: 15px;
 }
 
- .flex {
-  display: flex;
-  flex-direction: column; /* 👈 força empilhado */
-  align-items: center;
-  gap: 20px;
-}
-
-  .flex img {
-  width: 100%;
-  max-width: 600px;
-}
-
-.flex .box {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-
-/* TEXTOS */
+/* SEÇÕES */
 .section {
   margin: 30px 0;
   text-align: center;
 }
 
+/* FLEX (sempre empilhado) */
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* CAIXAS */
 .box {
   padding: 20px;
   border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-/* CORES ORIGINAIS */
+/* CORES */
 .grad1 {
   background: linear-gradient(0deg, #fff 18%, #d4ff7d 77%);
 }
@@ -65,21 +59,7 @@ body {
 img {
   width: 100%;
   height: auto;
-  max-height: 500px; /* 👈 trava altura */
-  object-fit: contain; /* 👈 evita corte */
-}
-  
-
-/* GRID */
-.flex {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.flex img {
-  flex: 1;
-  min-width: 200px;
+  max-width: 600px;
 }
 
 /* BOTÕES */
@@ -104,21 +84,9 @@ img {
 /* VIDEO */
 .video {
   width: 100%;
-  max-width: 600px;
+  max-width: 400px;
   aspect-ratio: 9/16;
   margin: 20px auto;
-}
-
-  @media (min-width: 900px) {
-
-  img {
-    max-height: 400px;
-  }
-
-  .video {
-    max-width: 500px;
-  }
-
 }
 
 iframe {
@@ -127,11 +95,14 @@ iframe {
   border: none;
 }
 
-/* RESPONSIVO TEXTO */
-media (max-width: 600px) {
-  .section {
-    font-size: 16px;
+/* DESKTOP AJUSTE */
+@media (min-width: 900px) {
+
+  .video {
+    aspect-ratio: 16/9;
+    max-width: 700px;
   }
+
 }
 </style>
 </head>
@@ -156,19 +127,19 @@ media (max-width: 600px) {
     <img src="assets/BrandNotifyChatGPT_1_1.png">
   </div>
 
-  <!-- MOCKUP + TEXTO -->
+  <!-- MOCKUP -->
   <div class="section flex">
     <img src="assets/MockupBrandNotify (2).png">
-    </div>
+  </div>
 
-  <div class="section box" style="background:#f3f2ae;">
-      <h3>Veja como funciona</h3>
-      <p>
-        O cliente instala o app com a sua marca.<br><br>
-        Recebe notificações.<br><br>
-        Lembra da sua empresa todos os dias.
-      </p>
-    
+  <!-- TEXTO -->
+  <div class="section box grad2">
+    <h3>Veja como funciona</h3>
+    <p>
+      O cliente instala o app com a sua marca.<br><br>
+      Recebe notificações.<br><br>
+      Lembra da sua empresa todos os dias.
+    </p>
   </div>
 
   <!-- VIDEOS -->
@@ -180,8 +151,6 @@ media (max-width: 600px) {
     <iframe src="https://www.youtube.com/embed/4Xd7FAs8oOA"></iframe>
   </div>
 
- 
-  
   <!-- TEXTO LONGO -->
   <div class="section box" style="background:#f3f2ae;">
     <h2>O que é o BrandNotify?</h2>
@@ -193,10 +162,11 @@ media (max-width: 600px) {
     </p>
   </div>
 
-  <a class="btn demo" href="https://github.com/edi10art-create/lojasuperdu/releases/download/v1.0/BrandNotify-BrandNotify.Demo.apk" target="_blank">BrandNotify Demo</a>
+  <!-- BOTÕES -->
+  <a class="btn demo" href="https://github.com/edi10art-create/lojasuperdu/releases/download/v1.0/BrandNotify-BrandNotify.Demo.apk" target="_blank">
+    BrandNotify Demo
+  </a>
 
-
-  <!-- SEGURANÇA -->
   <div class="section box grad3">
     <p>
       Esta versão é exclusiva para Android.<br><br>
@@ -205,9 +175,9 @@ media (max-width: 600px) {
     </p>
   </div>
 
-  
-  <a class="btn hotmart" href="https://lojasuperdu.hotmart.host/brandnotify-presenca-permanente-de-marca-no-celular-do-cliente-1d7558e4-01b5-4486-b485-e6640d3935e8" target="_blank">Hotmart</a>
-
+  <a class="btn hotmart" href="https://lojasuperdu.hotmart.host/brandnotify-presenca-permanente-de-marca-no-celular-do-cliente-1d7558e4-01b5-4486-b485-e6640d3935e8" target="_blank">
+    Hotmart
+  </a>
 
   <!-- IMAGEM FINAL -->
   <div class="section">
@@ -222,9 +192,9 @@ media (max-width: 600px) {
       lojasuperdu@gmail.com
     </p>
 
-    
-     <a class="btn whatsapp" href="https://wa.me/5511976478704?text=Quero%20um%20app%20para%20minha%20empresa" target="_blank">WhatsApp</a>
-
+    <a class="btn whatsapp" href="https://wa.me/5511976478704?text=Quero%20um%20app%20para%20minha%20empresa" target="_blank">
+      WhatsApp
+    </a>
   </div>
 
 </div>
