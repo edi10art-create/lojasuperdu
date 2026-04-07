@@ -6,11 +6,10 @@
 <title>LojaSuperDu.com</title>
 
 <style>
-/* CONFIGURAÇÕES GERAIS (MOBILE FIRST) */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+  background-color: #f4f4f4;
 }
 
 .container {
@@ -20,17 +19,27 @@ body {
   background-color: #fff;
 }
 
+/* SEÇÕES E BOXES */
 .section {
   margin: 30px 0;
   text-align: center;
 }
 
 .box {
-  padding: 25px;
-  border-radius: 15px;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-/* FLEX / IMAGENS */
+/* IMAGENS - Ajuste para não estourarem no PC */
+img {
+  width: 100%;
+  height: auto;
+  max-width: 450px; /* Limita tamanho das imagens no PC */
+  margin: 0 auto;
+  display: block;
+}
+
+/* FLEX (Para o Mockup específico) */
 .flex {
   display: flex;
   flex-direction: column;
@@ -38,16 +47,8 @@ body {
   gap: 20px;
 }
 
-img {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  display: block;
-  margin: 0 auto;
-}
-
 .flex img {
-  max-width: 350px; 
+  max-width: 300px; 
 }
 
 /* CORES */
@@ -58,26 +59,24 @@ img {
 /* BOTÕES */
 .btn {
   display: block;
-  margin: 15px auto;
-  padding: 18px;
+  margin: 20px auto;
+  padding: 15px;
   width: 90%;
   max-width: 400px;
   text-align: center;
   border-radius: 50px;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
   text-decoration: none;
   color: #fff;
-  transition: transform 0.2s;
 }
 
-.btn:hover { transform: scale(1.02); }
 .whatsapp { background: #25D366; }
 .demo { background: #200000; }
 .hotmart { background: #FF5C00; }
 
-/* VÍDEOS (MOBILE - UM EMBAIXO DO OUTRO) */
-.video-container {
+/* VÍDEOS REPROJETADOS */
+.video-wrapper {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -85,48 +84,31 @@ img {
   margin: 20px 0;
 }
 
-.video {
+.video-item {
   width: 100%;
-  max-width: 350px; /* Tamanho mobile ideal para 9:16 */
+  max-width: 320px; /* Largura de celular */
   aspect-ratio: 9/16;
+  background: #000;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 iframe {
   width: 100%;
   height: 100%;
   border: none;
-  border-radius: 10px;
 }
 
-/* --------------------------------------
-   AJUSTES PARA PC (Telas acima de 768px)
-   -------------------------------------- */
+/* AJUSTES PARA COMPUTADOR (DESKTOP) */
 @media (min-width: 768px) {
-  .container {
-    padding: 40px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.05);
-  }
-
-  /* Coloca os vídeos lado a lado no PC */
-  .video-container {
+  .video-wrapper {
     flex-direction: row;
     justify-content: center;
     gap: 40px;
   }
-
-  .video {
-    max-width: 300px; /* Vídeos um pouco menores para caberem lado a lado */
-  }
-
-  h2 { font-size: 32px; }
-  p { font-size: 18px; line-height: 1.6; }
-
-  /* Evita que o texto fique largo demais e difícil de ler */
-  .box p {
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  
+  .section h2 { font-size: 32px; }
+  .section p { font-size: 18px; max-width: 700px; margin: 10px auto; }
 }
 </style>
 </head>
@@ -137,7 +119,7 @@ iframe {
 
   <!-- LOGO -->
   <div class="section">
-    <img src="assets/Loja SuperDu Logo Letreiro Face (Loja.com Preto).png" style="max-width: 400px;">
+    <img src="assets/Loja SuperDu Logo Letreiro Face (Loja.com Preto).png" style="max-width: 350px;">
   </div>
 
   <!-- CHAMADA -->
@@ -148,7 +130,7 @@ iframe {
 
   <!-- IMAGEM -->
   <div class="section">
-    <img src="assets/BrandNotifyChatGPT_1_1.png" style="max-width: 600px;">
+    <img src="assets/BrandNotifyChatGPT_1_1.png">
   </div>
 
   <!-- MOCKUP -->
@@ -166,12 +148,12 @@ iframe {
     </p>
   </div>
 
-  <!-- SEÇÃO DE VÍDEOS (LADO A LADO NO PC) -->
-  <div class="video-container">
-    <div class="video">
+  <!-- VIDEOS (AGORA VISÍVEIS) -->
+  <div class="video-wrapper">
+    <div class="video-item">
       <iframe src="https://youtube.com"></iframe>
     </div>
-    <div class="video">
+    <div class="video-item">
       <iframe src="https://youtube.com"></iframe>
     </div>
   </div>
@@ -206,13 +188,13 @@ iframe {
 
   <!-- IMAGEM FINAL -->
   <div class="section">
-    <img src="assets/Bucks Burgers Celular na mesa.png" style="max-width: 600px;">
+    <img src="assets/Bucks Burgers Celular na mesa.png">
   </div>
 
   <!-- CONTATO -->
   <div class="section box grad1">
     <p>
-      <strong>Contato:</strong><br>
+      Contato:<br>
       WhatsApp - 11 976478704<br>
       lojasuperdu@gmail.com
     </p>
