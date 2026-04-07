@@ -65,7 +65,11 @@ body {
 img {
   width: 100%;
   height: auto;
+  max-height: 500px; /* 👈 trava altura */
+  object-fit: contain; /* 👈 evita corte */
 }
+  
+
 
 /* GRID */
 .flex {
@@ -101,8 +105,9 @@ img {
 /* VIDEO */
 .video {
   width: 100%;
-  aspect-ratio: 9/16;
-  margin: 20px 0;
+  max-width: 600px;
+  aspect-ratio: 16/9;
+  margin: 20px auto;
 }
 
 iframe {
