@@ -37,14 +37,19 @@ h3 { font-size: 1.4rem; color: #444; }
   border: 0;
 }
 
-  .full-bleed {
+ .full-bleed {
   width: 100vw;
-  margin-left: calc(-50vw + 50%);
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 .full-bleed img {
   width: 100%;
   max-width: none;
+  display: block;
 }
 
 .container {
