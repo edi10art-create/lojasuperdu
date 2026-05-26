@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BrandNotify - Aplicativo Personalizado para Presença Permanente da Sua Marca</title>
+
+    <meta name="description"
+        content="BrandNotify é um aplicativo utilitário personalizado que mantém a marca da sua empresa presente diariamente no celular do cliente através de lembretes rápidos, monitoramento de bateria e acesso recorrente ao seu conteúdo.">
+
+    <meta name="keywords"
+        content="BrandNotify, aplicativo personalizado, branding mobile, presença de marca, aplicativo empresarial, fidelização de clientes, marketing não invasivo, app para empresas, lembretes rápidos, monitoramento de bateria">
+
+    <meta name="author" content="LojaSuperDu">
+
+    <link rel="icon" type="image/png" href="assets/lojasuperdu-144.png">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MobileApplication",
+      "name": "BrandNotify",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Android",
+      "description": "Aplicativo utilitário personalizado para empresas manterem sua marca presente diariamente no celular do cliente através de lembretes rápidos, monitoramento de bateria e acesso recorrente ao conteúdo da empresa.",
+      "url": "https://lojasuperdu.com",
+      "creator": {
+        "@type": "Organization",
+        "name": "LojaSuperDu"
+      }
+    }
+    </script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            line-height: 1.6;
+            overflow-x: hidden;
+            color: #222;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        h1,
+        h2,
+        h3 {
+            line-height: 1.2;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .hero-img img {
+            max-width: 927px;
+            margin: auto;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: auto;
+            padding: 15px;
+            background: #fff;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(0deg, #ffffff 20%, #d4ff7d 100%);
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            color: #111;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .section {
+            margin: 35px 0;
+            text-align: center;
+        }
+
+        .box {
+            padding: 25px;
+            border-radius: 15px;
+        }
+
+        .grad1 {
+            background: linear-gradient(0deg, #fff 18%, #d4ff7d 77%);
+        }
+
+        .grad2 {
+            background: radial-gradient(circle, #fff 1%, #ffea7d 99%);
+        }
+
+        .grad3 {
+            background: radial-gradient(circle, #cbfdbd 82%, #fff 99%);
+            color: #000;
+        }
+
+        .mockup img {
+            max-width: 350px;
+            margin: auto;
+        }
+
+        .btn {
+            display: block;
+            margin: 20px auto;
+            padding: 16px;
+            width: 90%;
+            max-width: 420px;
+            text-align: center;
+            border-radius: 50px;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+            transition: 0.2s;
+        }
+
+        .btn:hover {
+            opacity: 0.92;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .demo {
+            background: #200000;
+        }
+
+        .whatsapp {
+            background: #25D366;
+        }
+
+        .hotmart {
+            background: #FF5C00;
+        }
+
+        .news {
+            background: #800000;
+        }
+
+        .video-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .video-item {
+            width: 100%;
+            max-width: 320px;
+            aspect-ratio: 9/16;
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        ul {
+            text-align: left;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 30px 20px;
+            background: #111;
+            color: #fff;
+            text-align: center;
+        }
+
+        footer a {
+            color: #d4ff7d;
+            text-decoration: none;
+        }
+
+        @media (min-width: 768px) {
+
+            .video-wrapper {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero p {
+                font-size: 1.3rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            h3 {
+                font-size: 1.6rem;
+            }
+
+            p,
+            li {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="hero-img">
+            <img src="assets/Loja SuperDu Logo Letreiro Face (Loja.com Preto).png"
+                alt="Logo Loja SuperDu">
+        </div>
+
+        <div class="hero-img">
+            <img src="assets/BrandNotifyCab.webp"
+                alt="BrandNotify - Aplicativo personalizado para empresas">
+        </div>
+
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+
+            <h1>
+                BrandNotify — O Aplicativo Utilitário Que Mantém Sua Marca Presente Todos os Dias
+            </h1>
+
+            <p>
+                O cliente utiliza o app para lembretes rápidos e monitoramento da bateria enquanto a sua marca permanece visível de forma natural, silenciosa e recorrente no celular dele.
+            </p>
+
+        </section>
+
+        <section class="section box grad1">
+
+            <h2>O que é o BrandNotify?</h2>
+
+            <p>
+                O BrandNotify é um aplicativo Android personalizado para empresas que desejam manter sua marca presente diariamente no celular do cliente sem depender de redes sociais, notificações invasivas ou coleta de dados.
+            </p>
+
+            <p>
+                O app funciona como uma ferramenta útil do dia a dia enquanto exibe permanentemente a logo da empresa no topo da interface.
+            </p>
+
+        </section>
+
+        <section class="section mockup">
+            <img src="assets/MockupBrandNotify (2).webp"
+                alt="Aplicativo BrandNotify personalizado com a marca da empresa">
+        </section>
+
+        <section class="section box grad2">
+
+            <h2>Como Funciona?</h2>
+
+            <p>
+                O BrandNotify foi criado para unir utilidade prática e presença permanente de marca.
+            </p>
+
+            <ul>
+                <li>O cliente instala o aplicativo personalizado da sua empresa.</li>
+                <li>A logo da sua marca permanece visível no topo do app o tempo todo.</li>
+                <li>O usuário utiliza o aplicativo para lembretes rápidos e monitoramento inteligente da bateria.</li>
+                <li>O app toca um aviso sonoro quando a bateria atinge os limites configurados pelo usuário.</li>
+                <li>Na parte inferior existe o botão <strong>"Saiba Mais"</strong>.</li>
+                <li>Esse botão pode direcionar para promoções, cardápios, catálogos, blogs, jornais ou qualquer página desejada pela empresa.</li>
+                <li>A página pode ser atualizada semanalmente para gerar recorrência natural do usuário.</li>
+            </ul>
+
+        </section>
+
+        <section class="video-wrapper">
+
+            <div class="video-item">
+                <iframe src="https://www.youtube.com/embed/ivfOQj1AFJQ"
+                    allowfullscreen></iframe>
+            </div>
+
+            <div class="video-item">
+                <iframe src="https://www.youtube.com/embed/4Xd7FAs8oOA"
+                    allowfullscreen></iframe>
+            </div>
+
+        </section>
+
+        <section class="section box" style="background:#f3f2ae;">
+
+            <h2>Por Que Isso Funciona Tão Bem?</h2>
+
+            <p>
+                Diferente de redes sociais e aplicativos invasivos, o BrandNotify permanece silenciosamente no celular do cliente oferecendo utilidade real.
+            </p>
+
+            <p>
+                Isso cria uma presença recorrente e positiva da marca sem depender de algoritmos, anúncios agressivos ou notificações constantes.
+            </p>
+
+            <p>
+                Sua empresa deixa de disputar atenção em meio a milhares de concorrentes e passa a ocupar um espaço próprio no celular do cliente.
+            </p>
+
+        </section>
+
+        <section class="section box grad3">
+
+            <h2>Seguro, Leve e Não Invasivo</h2>
+
+            <p>
+                O BrandNotify foi desenvolvido para funcionar de forma simples, leve e segura.
+            </p>
+
+            <ul>
+                <li>Sem coleta de dados pessoais.</li>
+                <li>Sem rastreamento.</li>
+                <li>Sem notificações invasivas.</li>
+                <li>Sem dependência constante da internet.</li>
+                <li>Sem exposição desnecessária a riscos de invasão.</li>
+            </ul>
+
+            <p>
+                O aplicativo permanece passivo no aparelho enquanto continua reforçando diariamente a presença da sua marca.
+            </p>
+
+        </section>
+
+        <section class="section box grad1">
+
+            <h2>Experimente Agora</h2>
+
+            <p>
+                Instale o BrandNotify Demo e veja na prática como funciona a experiência de presença permanente de marca através de um aplicativo útil e funcional.
+            </p>
+
+        </section>
+
+        <a class="btn demo"
+            href="https://github.com/edi10art-create/lojasuperdu/releases/download/v1.0/BrandNotify-BrandNotify.Demo.apk"
+            target="_blank">
+            Baixar BrandNotify Demo
+        </a>
+
+        <section class="section box grad3">
+
+            <p>
+                <strong>Nota de Segurança:</strong><br><br>
+                O Android pode exibir um aviso por se tratar de uma instalação direta fora da Google Play. O aplicativo é leve, seguro e desenvolvido exclusivamente para utilidade prática e presença permanente da marca.
+            </p>
+
+        </section>
+
+        <section class="section box grad1">
+
+            <h2>Sua Marca Presente Todos os Dias</h2>
+
+            <p>
+                Enquanto o cliente utiliza o aplicativo para funções úteis do cotidiano, sua marca permanece visível naturalmente sem precisar disputar atenção em redes sociais.
+            </p>
+
+            <p>
+                O botão <strong>"Saiba Mais"</strong> cria um acesso recorrente para conteúdos atualizados semanalmente como promoções, novidades, jornais, blogs ou campanhas especiais.
+            </p>
+
+        </section>
+
+        <section class="section">
+
+            <p>
+                Pagamento único e seguro via <strong>Hotmart</strong>.
+            </p>
+
+        </section>
+
+        <a class="btn hotmart"
+            href="https://lojasuperdu.hotmart.host/brandnotify-presenca-permanente-de-marca-no-celular-do-cliente-1d7558e4-01b5-4486-b485-e6640d3935e8"
+            target="_blank">
+            Comprar na Hotmart
+        </a>
+
+        <section class="section mockup">
+
+            <img src="assets/Bucks Burgers Celular na mesa.webp"
+                alt="Marca da empresa presente no celular do cliente">
+
+        </section>
+
+        <section class="section box grad1">
+
+            <h2>Dúvidas Técnicas ou Comerciais?</h2>
+
+            <p>
+                Entre em contato diretamente pelo WhatsApp.
+            </p>
+
+            <a class="btn whatsapp"
+                href="https://wa.me/5511976478704?text=Quero%20um%20app%20para%20minha%20empresa"
+                target="_blank">
+                WhatsApp
+            </a>
+
+            <div class="section box"
+                style="background: rgba(255,255,255,0.5); margin-top:40px;">
+
+                <h3>Exemplo Real de Utilização</h3>
+
+                <p>
+                    Veja como a LojaSuperDu utiliza o BrandNotify para entregar dicas, conteúdos e ofertas atualizadas semanalmente.
+                </p>
+
+                <a class="btn news"
+                    href="https://lojasuperdunews.com.br"
+                    target="_blank">
+                    Acessar Exemplo Real
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            <strong>BrandNotify</strong> — Desenvolvido por LojaSuperDu
+        </p>
+
+        <p>
+            Aplicativo utilitário personalizado para presença recorrente de marca.
+        </p>
+
+        <p>
+            © 2026 LojaSuperDu - Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
