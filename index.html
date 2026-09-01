@@ -122,7 +122,14 @@
         .grad4 {
     background: #f8f9fa;
 }
+    
+       .grad5 {
+    background: linear-gradient(0deg, #fff 10%, #0000FF 77%);
+}
 
+       .grad6 {
+    background: linear-gradient(0deg, #000 50%,);
+}
 details {
     background: #fff;
     border: 1px solid #ddd;
@@ -229,18 +236,7 @@ details p {
             margin: auto;
         }
 
-        footer {
-            margin-top: 50px;
-            padding: 30px 20px;
-            background: #111;
-            color: #fff;
-            text-align: center;
-        }
-
-        footer a {
-            color: #d4ff7d;
-            text-decoration: none;
-        }
+        
 
         @media (min-width: 768px) {
 
@@ -551,15 +547,15 @@ details p {
                 WhatsApp
             </a>
 
-            <div class="section box"
-                style="background: rgba(255,255,255,0.5); margin-top:40px;">
-
+            <div class="section box grad5">
+               
                 <h3>Um exemplo de utilização</h3>
 
                 <p>
                     A LojaSuperDu utiliza o conceito para entregar dicas, conteúdos e ofertas
                     atualizadas em uma página própria.
                 </p>
+           </div>
 
                 <a class="btn news"
                     href="https://lojasuperdunews.com.br"
@@ -567,13 +563,13 @@ details p {
                     Página de Recorrência
                 </a>
 
-            </div>
+            
 
         
 
     </main>
 
-    <footer>
+    <div class="section box grad6">
 
         <p>
             <h3>BrandNotify</h3>
@@ -588,7 +584,7 @@ details p {
             © 2026 LojaSuperDu - Todos os direitos reservados.
         </p>
 
-    </footer>
+    </div>
 
 </body>
 </html>
